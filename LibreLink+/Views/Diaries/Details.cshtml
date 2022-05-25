@@ -1,0 +1,42 @@
+﻿@model LibreLink_.Models.Diary
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Diary</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaryDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaryDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaryLevel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaryLevel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaryTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaryTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DiaryID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

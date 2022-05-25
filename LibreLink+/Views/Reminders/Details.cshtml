@@ -1,0 +1,34 @@
+﻿@model LibreLink_.Models.Reminder
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Reminder</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ReminderTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReminderTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReminderMessage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReminderMessage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ReminderId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

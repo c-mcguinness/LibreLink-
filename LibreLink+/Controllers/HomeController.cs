@@ -10,7 +10,23 @@ namespace LibreLink_.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            return View();
+        }
+    public ActionResult Diary()
+        {
+            ViewBag.Message = "Your Diary Page.";
+
+            return View();
+        }
+        public ActionResult Reminder()
+        {
+            ViewBag.Message = "Your Reminder Page.";
+
+            return View();
+        }
+        public ActionResult LevelGuide()
+        {
+            ViewBag.Message = "Your Level Guide Page.";
 
             return View();
         }

@@ -16,6 +16,7 @@ namespace LibreLink_.Models
         public int DiaryID { get; set; }
         public String DiaryDate { get; set; }
         public int DiaryLevel { get; set; }
+        public String DiaryTime { get; set; }
         public virtual ICollection<LevelGuide> LevelGuides
         {
             get { return _levelguides; }

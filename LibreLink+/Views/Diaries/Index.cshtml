@@ -1,0 +1,57 @@
+﻿@model IEnumerable<LibreLink_.Models.Diary>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div class="jumbotron">
+    <h1><center>Diary Entries</center></h1>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Within this page?</h2>
+        <p>
+            Within this application the user has control over the entries of a diary entry page, the custom gauge of their glucose levels with an already pre-registered gauge for typical users
+            and a reminder page which consists of what time and a message which you can write to remind you of this reminder and why you set a time. Within the button will bring you to
+        </p>
+    </div>
+</div>
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DiaryDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiaryLevel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiaryTime)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiaryDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiaryLevel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiaryTime)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.DiaryID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.DiaryID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.DiaryID })
+            </td>
+        </tr>
+    }
+
+</table>

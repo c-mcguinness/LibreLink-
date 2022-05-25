@@ -7,19 +7,18 @@ namespace LibreLink_.Models
 {
     public class Reminder
     {
-        private ICollection<LevelGuide> _levelguides;
-
+        private ICollection<Diary> _diaries;
         public Reminder()
         {
-            _levelguides = new List<LevelGuide>();
+            _diaries = new List<Diary>();
         }
-        public int DiaryID { get; set; }
-        public String DiaryDate { get; set; }
-        public int DiaryLevel { get; set; }
-        public virtual ICollection<LevelGuide> LevelGuides
+        public int ReminderId { get; set; }
+        public String ReminderTime { get; set; }
+        public String ReminderMessage { get; set; }
+        public virtual ICollection<Diary> Diaries
         {
-            get { return _levelguides; }
-            set { _levelguides = value; }
+            get { return _diaries; }
+            set { _diaries = value; }
         }
     }
 }
